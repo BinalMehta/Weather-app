@@ -1,5 +1,6 @@
 // api.openweathermap.org/data/2.5/weather?q={city name}&appid={your api key}
 
+
 const weatherApi = {
     key: "ff2dc2b48a0f08eb37512bd051661a6a",
     baseUrl: "https://api.openweathermap.org/data/2.5/weather", 
@@ -25,7 +26,10 @@ function getWeatherReport(city) {
         return weather.json();
     }).then(showWeatherReport);
     
+
 }
+
+
 
 // Show Weather Report
 function showWeatherReport(weather){
@@ -38,7 +42,7 @@ function showWeatherReport(weather){
     temperature.innerHTML = `${Math.round(weather.main.temp)}&deg;C`;
 
     let minMaxTemp = document.getElementById('min-max');
-    minMaxTemp.innerHTML = `${Math.floor(weather.main.temp_min)}&deg;C (min)/ ${Math.ceil(weather.main.temp_max)}&deg;C (max) `;
+    minMaxTemp.innerHTML = `${Math.floor(weather.main.temp_min)}&deg;C (min) / ${Math.ceil(weather.main.temp_max)}&deg;C (max) `;
 
     let weatherType = document.getElementById('weather');
     weatherType.innerText = `${weather.weather[0].main}`;

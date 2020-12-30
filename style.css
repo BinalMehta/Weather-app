@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html {
+    overflow: auto;
+}
+
 body {
     background-image: url('https://source.unsplash.com/1600x900/?landscape');
     height: 100vh;
@@ -14,19 +18,21 @@ body {
     background-size: cover;
 }
 
-.app-main {
+.card {
     width: 50vh;
-    margin: 100px auto;
+    margin: 40px auto;
     background-color: #000000d0;
     padding: 20px;
     text-align: center;
 }
+
 
 .app-main > * {
     margin-bottom: 20px;
 }
 
 .input-box {
+    display: flex;
     width: 100%;
     background-color:#7c7c7c2b;
     border: none;
@@ -51,11 +57,15 @@ body {
     line-height: 2rem;
     border-radius: 10px;
     background-color: #444141d0;
-    height: 50vh;
+    height: 60vh;
+    margin: 10px;
 }
 
-.location-details {
-    font-weight: bold;
+.city {
+    font-style: italic;
+    color: #D1FAE5;
+    font-size: 20pt; 
+    padding: 10px;
 }
 
 .weather-status {
@@ -69,9 +79,29 @@ body {
     text-shadow: 2px 4px rgba(0,0,0,0.3);
 }
 
-.min-max, .weather {
-    font-size: 12pt;
+.min-max {
+    font-size: 10pt;
+    font-weight: 600;
+    padding: 10px;
+    
+}
+
+.weather{
+    font-size: 15pt;
     font-weight: 600;
     padding: 10px;
 }
 
+footer p {
+    color: black;
+    background-color: #FCA5A5;
+    padding: 1rem;
+    font-style: italic;
+    text-align: center;
+    font-weight: bold;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    flex-shrink: 0;
+}
